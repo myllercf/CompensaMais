@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.casa.compensamais.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calcule a quantidade de produto que compensa mais"
+        android:id="@+id/texto1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:id="@+id/texto22"
+        android:layout_below="@+id/valor1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/valor1"
+        android:layout_below="@+id/qtde1"
+        android:layout_alignLeft="@+id/qtde1"
+        android:layout_alignStart="@+id/qtde1" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/qtde2"
+        android:layout_below="@+id/texto22"
+        android:layout_alignLeft="@+id/valor1"
+        android:layout_alignStart="@+id/valor1" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/valor2"
+        android:layout_below="@+id/qtde2"
+        android:layout_alignLeft="@+id/qtde2"
+        android:layout_alignStart="@+id/qtde2" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/qtde1"
+        android:layout_below="@+id/texto1"
+        android:layout_toRightOf="@+id/texto2"
+        android:layout_toEndOf="@+id/texto2" />
+
+    <TextView
+        android:text="quantidade:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/texto2"
+        android:layout_alignBaseline="@+id/qtde1"
+        android:layout_alignBottom="@+id/qtde1"
+        android:layout_toRightOf="@+id/resultado"
+        android:layout_toEndOf="@+id/resultado" />
+
+    <TextView
+        android:text="quantidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/valor2"
+        android:layout_toLeftOf="@+id/qtde2"
+        android:layout_toStartOf="@+id/qtde2"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/texto4" />
+
+    <Button
+        android:text="Calcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:id="@+id/button"
+        android:layout_below="@+id/valor2"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="valor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/texto5"
+        android:layout_alignBaseline="@+id/valor2"
+        android:layout_alignBottom="@+id/valor2"
+        android:layout_alignLeft="@+id/texto4"
+        android:layout_alignStart="@+id/texto4"
+        android:layout_marginLeft="19dp"
+        android:layout_marginStart="19dp" />
+
+    <TextView
+        android:text="valor:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/texto3"
+        android:layout_alignBaseline="@+id/valor1"
+        android:layout_alignBottom="@+id/valor1"
+        android:layout_alignRight="@+id/texto5"
+        android:layout_alignEnd="@+id/texto5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:id="@+id/resultado"
+        android:layout_below="@+id/button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>

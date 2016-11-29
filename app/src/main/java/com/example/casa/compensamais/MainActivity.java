@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText qtde2;
     private EditText valor2;
     private Button button;
-    private TextView resultado;
+    private TextView resposta;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
                 qtde2 = (EditText)findViewById(R.id.qtde2);
                 valor2 = (EditText)findViewById(R.id.valor2);
 
-                resultado = (TextView) findViewById(R.id.resultado);
+                resposta = (TextView) findViewById(R.id.resultado);
 
                 Produto p1 = new Produto();
                 p1.setQtde( Integer.parseInt( qtde1.getText().toString() ) );
@@ -44,7 +44,19 @@ public class MainActivity extends AppCompatActivity {
                 p2.setQtde( Integer.parseInt( qtde2.getText().toString() ) );
                 p2.setValor( Float.valueOf( valor2.getText().toString() ) );
 
-                resultado.setText(calcular(p1, p2));
+                resposta.setText(calcular(p1, p2));
+
+                Intent intent = new Intent(MainActivity.this, Resultado.class);
+                //TextView edtTexto = (TextView) findViewById(R.id.edtTexto);
+
+                //String txt = "";
+                //txt = edtTexto.getText().toString();
+                Bundle bundle = new Bundle();
+
+                bundle.putString("resposta", calcular(p1, p2).toString());
+                intent.putExtras(bundle);
+
+                startActivity(intent);
             }
         });
 

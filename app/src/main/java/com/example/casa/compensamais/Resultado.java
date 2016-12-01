@@ -15,9 +15,9 @@ public class Resultado extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.resultado);
 
-        Intent intent = getIntent();
-        Bundle bundle = intent.getExtras();
-        String texto = bundle.getString("resposta");
+        //Intent intent = getIntent();
+        //Bundle bundle = intent.getExtras();
+        String texto = "xxxxxxx";//bundle.getString("resposta");
         TextView resultado = (TextView) findViewById(R.id.resultado2);
         resultado.setText(texto);
     }

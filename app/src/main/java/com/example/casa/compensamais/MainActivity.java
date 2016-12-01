@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        button = (Button) findViewById(R.id.button);
+        Button button = (Button) findViewById(R.id.button);
 
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v){
@@ -46,17 +46,17 @@ public class MainActivity extends AppCompatActivity {
 
                 resposta.setText(calcular(p1, p2));
 
-                Intent intent = new Intent(MainActivity.this, Resultado.class);
-                //TextView edtTexto = (TextView) findViewById(R.id.edtTexto);
+                TextView edtTexto = (TextView) findViewById(R.id.resultado);
+                //Intent intent = new Intent(MainActivity.this, Resultado.class);
 
                 //String txt = "";
                 //txt = edtTexto.getText().toString();
-                Bundle bundle = new Bundle();
+                /*Bundle bundle = new Bundle();
 
                 bundle.putString("resposta", calcular(p1, p2).toString());
                 intent.putExtras(bundle);
 
-                startActivity(intent);
+                startActivity(intent);*/
             }
         });
 
